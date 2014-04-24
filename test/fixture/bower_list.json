@@ -1,0 +1,103 @@
+{
+    "canonicalDir": "/fixture",
+    "dependencies": {
+        "component.js": {
+            "canonicalDir": "/fixture/bower_components/component.js",
+            "dependencies": {},
+            "pkgMeta": {
+                "dependencies": {},
+                "main": "./component.js",
+                "name": "component.js"
+            }
+        },
+        "component-dev": {
+            "canonicalDir": "/fixture/bower_components/component-dev",
+            "dependencies": {},
+            "pkgMeta": {
+                "name": "component-dev"
+            }
+        },
+        "component": {
+            "canonicalDir": "/fixture/bower_components/component",
+            "dependencies": {},
+            "pkgMeta": {
+                "dependencies": {},
+                "main": "./component.js",
+                "name": "component"
+            }
+        },
+        "package-1": {
+            "canonicalDir": "/fixture/bower_components/package-1",
+            "dependencies": {
+                "component.js": {
+                    "canonicalDir": "/fixture/bower_components/component.js",
+                    "dependencies": {},
+                    "pkgMeta": {
+                        "dependencies": {},
+                        "main": "./component.js",
+                        "name": "component.js"
+                    }
+                },
+                "component": {
+                    "canonicalDir": "/fixture/bower_components/component",
+                    "dependencies": {},
+                    "pkgMeta": {
+                        "dependencies": {},
+                        "main": "./component.js",
+                        "name": "component"
+                    }
+                },
+                "package-2": {
+                    "canonicalDir": "/fixture/bower_components/package-2",
+                    "dependencies": {
+                        "component.js": {
+                            "canonicalDir": "/fixture/bower_components/component.js",
+                            "dependencies": {},
+                            "pkgMeta": {
+                                "dependencies": {},
+                                "main": "./component.js",
+                                "name": "component.js"
+                            }
+                        }
+                    },
+                    "pkgMeta": {
+                        "dependencies": {
+                            "component.js": "1.0.0"
+                        },
+                        "devDependencies": {
+                            "component-dev": "1.0.0"
+                        },
+                        "main": "package-2.js",
+                        "name": "package-2",
+												"rjsConfig": "config.js"
+                    }
+                }
+            },
+            "pkgMeta": {
+                "dependencies": {
+                    "component.js": "1.0.0",
+                    "component": "1.0.0",
+                    "package-2": "1.0.0"
+                },
+                "devDependencies": {
+										"component-dev": "1.0.0"
+                },
+                "main": "package-1.js",
+                "name": "package-1",
+								"rjsConfig": "config.js"
+            }
+        }
+    },
+    "pkgMeta": {
+        "dependencies": {
+            "component.js": "1.0.0",
+            "component": "1.0.0",
+            "package-1": "1.0.0"
+        },
+        "devDependencies": {
+            "component-dev": "1.0.0"
+        },
+        "main": "main.js",
+        "name": "main-component"
+    }
+}

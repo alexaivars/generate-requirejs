@@ -1,0 +1,39 @@
+{
+    "author": "alexander aivars <alex@aivars.se> (https://github.com/alexaivars)",
+    "bin": {
+        "generate-requirejs": "./bin/generate-requirejs.js"
+    },
+    "bugs": {
+        "url": "https://github.com/alexaivars/generate-requirejs/issues"
+    },
+    "dependencies": {
+        "bower": "~1.3.2",
+        "lodash": "~2.4.1",
+        "minimist": "0.0.8",
+        "q": "~1.0.1",
+        "requirejs": "~2.1.11"
+    },
+    "description": "A util to generate a requirejs config file including all bower dependencies",
+    "devDependencies": {
+        "jasmine-node": "~1.14.3",
+        "rewire": "~2.0.0"
+    },
+    "homepage": "https://github.com/alexaivars/generate-requirejs",
+    "keywords": [
+        "bower",
+        "requirejs",
+        "config",
+        "r.js"
+    ],
+    "license": "BSD-2-Clause",
+    "main": "./lib/index.js",
+    "name": "generate-requirejs",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alexaivars/generate-requirejs.git"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "version": "0.0.1"
+}
