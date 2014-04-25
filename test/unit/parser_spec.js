@@ -47,13 +47,13 @@ describe('Bower to requirejs dependency generator', function () {
 	});
 
 	it('should return a promise', function(done) {
-		module(fixture).then(function(result){
+		module.config(fixture).then(function(result){
 			done();
 		}, done);
 	}, 250);
 
 	it('should return a list of bower dependencies as require packages', function(done) {
-		module(fixture).then(function(result){
+		module.config(fixture).then(function(result){
 			expect(_.isEqual(expected, result)).toBe(true);
 			done();
 		}, done);

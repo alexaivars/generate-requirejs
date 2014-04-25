@@ -23,3 +23,19 @@ General options:
   -v, --version        # Print the version number
 ```
 
+# bower modules
+
+generate-requirejs will merge requirejs configs defined in a components bower.json
+
+bower.json
+```
+{
+  "name": "component",
+  "main": "index.js",
+  "description": "a component",
+	"requirejs": {
+  	"config": "config.js"
+  }
+}
+```
+
