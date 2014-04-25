@@ -1,8 +1,10 @@
+/*global expect, describe, it*/
+
+"use strict";
 
 describe('generator', function () {
 	var rewire = require('rewire');
 	var Q = require('q');
-	var _ = require('lodash');
 
 	var module = rewire('../../lib/index.js');
 	
@@ -30,5 +32,9 @@ describe('generator', function () {
 		}
 	});
 
+	it('should be tested', function(done) {
+		expect(true).toBe(true);
+		done();
+	}, 250);
 
 });

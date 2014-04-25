@@ -1,3 +1,7 @@
+/*global requirejs*/
+
+"use strict";
+
 requirejs.config({
     baseUrl: "js/lib",
     paths: {
@@ -20,6 +24,8 @@ requirejs.config({
 });
 
 function a() {
-	var a = 5;
+	var b = 5;
+	return b;
 }
 
+a();

@@ -16,7 +16,7 @@ This package also ships with a `generate-requirejs` command.
 ```
 Usage: generate-requirejs ./config.js
 
-If the config file dose not exists, one will be created.
+If the config file does not exists, one will be created.
 
 General options:
   -h, --help           # Print options and usage

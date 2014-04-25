@@ -1,3 +1,6 @@
+/*global expect, describe, it*/
+
+"use strict";
 
 describe('Bower to requirejs dependency generator', function () {
 
