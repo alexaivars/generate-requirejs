@@ -69,7 +69,9 @@
                         },
                         "main": "package-2.js",
                         "name": "package-2",
-												"rjsConfig": "config.js"
+												"requirejs": {
+													"config":"config.js"
+												}
                     }
                 }
             },
@@ -84,7 +86,9 @@
                 },
                 "main": "package-1.js",
                 "name": "package-1",
-								"rjsConfig": "config.js"
+								"requirejs": {
+									"config":"config.js"
+								}
             }
         }
     },

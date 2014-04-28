@@ -2,26 +2,18 @@
 
 "use strict";
 
-describe('Bower to requirejs dependency generator', function () {
+describe('parser.js', function () {
 
 	var path = require('path');	
 	var rewire = require('rewire');
 	var _	= require('lodash');
+	var Q	= require('q');
 
 	var module = rewire('../../lib/parser');
 	var fixture = require('../fixture/bower_list.json');
 	var expected =  {
-		packages:[ 
-			{ 
-				name: 'component',
-			  location: 'bower_components/component.js',
-				main: 'component.js'
-			},
-			{
-				name: 'component',
-			  location: 'bower_components/component',
-				main: 'component.js'
-			},
+		paths: { component: 'bower_components/component/component' },
+		packages: [
 			{
 				name: 'package-2',
 				location: 'bower_components/package-2',
@@ -43,6 +35,9 @@ describe('Bower to requirejs dependency generator', function () {
 			relative: path.relative,
 			normalize: path.normalize,
 			join: path.join
+		},
+		requirejs: {
+			read: function() { return new Q({}); }
 		}
 	});
 
@@ -52,7 +47,7 @@ describe('Bower to requirejs dependency generator', function () {
 		}, done);
 	}, 250);
 
-	it('should return a list of bower dependencies as require packages', function(done) {
+	it('should return a list of bower dependencies as require paths', function(done) {
 		module.config(fixture).then(function(result){
 			expect(_.isEqual(expected, result)).toBe(true);
 			done();
