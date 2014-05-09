@@ -6,19 +6,20 @@ var opts = require('minimist')(process.argv.slice(2));
 var generator = require('../lib');
 
 function init() {
-
 	generator({
-		config: opts._[0]
+		src: opts._[0],
+		out: opts.o || opts.out || opts._[0]
 	});
 }
 
 function help() {
   var out = [
-    'Usage: generate-requirejs ./config.js',
+    'Usage: generate-requirejs source',
     '',
     'General options:',
     '  -h, --help           # Print options and usage',
     '  -v, --version        # Print the version number',
+    '  -o, --out            # Output result to file',
     ''
   ];
 
@@ -26,7 +27,8 @@ function help() {
 }
 
 function pre() {
-   
+
+	console.log(opts);
 	if (opts.version || opts.v) {
     return console.log(pkg.version);
   }
