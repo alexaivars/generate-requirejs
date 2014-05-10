@@ -14,13 +14,14 @@ npm install alexaivars/generate-requirejs
 This package also ships with a `generate-requirejs` command.
 
 ```
-Usage: generate-requirejs ./config.js
+Usage: generate-requirejs config.js
 
 If the config file does not exists, one will be created.
 
 General options:
   -h, --help           # Print options and usage
   -v, --version        # Print the version number
+	-o, --out            # Output result to file
 ```
 
 # bower modules
